@@ -10,18 +10,18 @@
     <parameter name="browser" value="chrome"/>
     <groups>
       <run>
-        <include name="master"/>
+        <include name="sanity"/>
         <exclude name="datadriven"/>
       </run>
     </groups>
     <classes>
-      <class name="testCases.TC003_DataDrivenLoginCheck">
+      <class name="testCases.TC001_RegistrationCheck">
         <methods>
           <include name="teardown"/>
-          <include name="loginCheck" invocation-numbers="1 2 3 4"/>
+          <include name="verify_account_registration"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- testCases.TC003_DataDrivenLoginCheck -->
+      </class> <!-- testCases.TC001_RegistrationCheck -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
