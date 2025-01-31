@@ -1,0 +1,2 @@
+cd C:\Eclipse\WORKSPACE\OPENCART_PROJECT
+mvn test
