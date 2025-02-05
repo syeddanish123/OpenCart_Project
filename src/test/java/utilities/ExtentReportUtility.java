@@ -25,7 +25,7 @@ public class ExtentReportUtility implements ITestListener {
 	
 	public void onStart(ITestContext context) {
 	    
-		SimpleDateFormat sdf=new SimpleDateFormat("yyyy.mm.dd.hh.mm.ss");
+		SimpleDateFormat sdf=new SimpleDateFormat("YYYY.MM.dd.hh.mm.ss");
     	Date dt=new Date();
     	String dates=sdf.format(dt);
     	

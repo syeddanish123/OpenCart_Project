@@ -37,7 +37,7 @@ public class BaseClass {
 	@Parameters({"os","browser","execution"})
 	public void setup(String os,String brws,String execution) throws  Exception {
 		
-//Remote exeution setup...
+    //Remote exeution setup...
 		String url="http://localhost:4444/wd/hub";
 		DesiredCapabilities cap=new DesiredCapabilities();
 		

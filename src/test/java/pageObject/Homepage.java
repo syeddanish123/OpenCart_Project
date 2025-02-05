@@ -31,10 +31,16 @@ public class Homepage extends Basepage {
  @FindBy(xpath="//a[normalize-space()='Login']")
  WebElement lnkLogin;
 
- 
+ @FindBy(xpath="//a[normalize-space()='Desktops']")
+ WebElement lnkDesktop;
  
  //whatever element in Homepage of application that individual method 
  //have to write below..
+ 
+ public void clickDesktop() {
+	 
+	 lnkDesktop.click();
+ }
  
  public void clickMyAccount() {
 	 

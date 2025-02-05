@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-01-31T19:30:09 IST" name="Suite" finished-at="2025-01-31T19:30:14 IST" duration-ms="5327">
+  <suite started-at="2025-02-05T17:01:18 IST" name="Suite" finished-at="2025-02-05T17:01:42 IST" duration-ms="23563">
     <groups>
       <group name="sanity">
-        <method signature="TC001_RegistrationCheck.verify_account_registration()[pri:0, instance:testCases.TC001_RegistrationCheck@2794eab6]" name="verify_account_registration" class="testCases.TC001_RegistrationCheck"/>
+        <method signature="TC001_RegistrationCheck.verify_account_registration()[pri:0, instance:testCases.TC001_RegistrationCheck@79924b]" name="verify_account_registration" class="testCases.TC001_RegistrationCheck"/>
+        <method signature="TC004_VerifyMacProductSuccess_AddToCart.verifyMacAddToCart()[pri:0, instance:testCases.TC004_VerifyMacProductSuccess_AddToCart@12468a38]" name="verifyMacAddToCart" class="testCases.TC004_VerifyMacProductSuccess_AddToCart"/>
+        <method signature="TC005_Register_Login.testcaseRegister_login()[pri:0, instance:testCases.TC005_Register_Login@1aa7ecca]" name="testcaseRegister_login" class="testCases.TC005_Register_Login"/>
       </group> <!-- sanity -->
       <group name="master">
-        <method signature="TC001_RegistrationCheck.verify_account_registration()[pri:0, instance:testCases.TC001_RegistrationCheck@2794eab6]" name="verify_account_registration" class="testCases.TC001_RegistrationCheck"/>
+        <method signature="TC001_RegistrationCheck.verify_account_registration()[pri:0, instance:testCases.TC001_RegistrationCheck@79924b]" name="verify_account_registration" class="testCases.TC001_RegistrationCheck"/>
+        <method signature="TC005_Register_Login.testcaseRegister_login()[pri:0, instance:testCases.TC005_Register_Login@1aa7ecca]" name="testcaseRegister_login" class="testCases.TC005_Register_Login"/>
       </group> <!-- master -->
     </groups>
-    <test started-at="2025-01-31T19:30:09 IST" name="Test" finished-at="2025-01-31T19:30:14 IST" duration-ms="5327">
-      <class name="testCases.TC001_RegistrationCheck">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC001_RegistrationCheck@2794eab6]" started-at="2025-01-31T19:30:09 IST" name="setup" finished-at="2025-01-31T19:30:12 IST" duration-ms="2883" status="PASS">
+    <test started-at="2025-02-05T17:01:18 IST" name="Test" finished-at="2025-02-05T17:01:42 IST" duration-ms="23563">
+      <class name="testCases.TC004_VerifyMacProductSuccess_AddToCart">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC004_VerifyMacProductSuccess_AddToCart@12468a38]" started-at="2025-02-05T17:01:28 IST" name="setup" finished-at="2025-02-05T17:01:31 IST" duration-ms="3348" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -34,7 +37,69 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verify_account_registration()[pri:0, instance:testCases.TC001_RegistrationCheck@2794eab6]" started-at="2025-01-31T19:30:12 IST" name="verify_account_registration" finished-at="2025-01-31T19:30:14 IST" duration-ms="1752" status="FAIL">
+        <test-method signature="verifyMacAddToCart()[pri:0, instance:testCases.TC004_VerifyMacProductSuccess_AddToCart@12468a38]" started-at="2025-02-05T17:01:31 IST" name="verifyMacAddToCart" finished-at="2025-02-05T17:01:32 IST" duration-ms="1157" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMacAddToCart -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:testCases.TC004_VerifyMacProductSuccess_AddToCart@12468a38]" started-at="2025-02-05T17:01:32 IST" name="teardown" finished-at="2025-02-05T17:01:32 IST" duration-ms="236" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- testCases.TC004_VerifyMacProductSuccess_AddToCart -->
+      <class name="testCases.TC005_Register_Login">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC005_Register_Login@1aa7ecca]" started-at="2025-02-05T17:01:32 IST" name="setup" finished-at="2025-02-05T17:01:35 IST" duration-ms="2754" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[windows]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[local]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testcaseRegister_login()[pri:0, instance:testCases.TC005_Register_Login@1aa7ecca]" started-at="2025-02-05T17:01:35 IST" name="testcaseRegister_login" finished-at="2025-02-05T17:01:42 IST" duration-ms="6706" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testcaseRegister_login -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:testCases.TC005_Register_Login@1aa7ecca]" started-at="2025-02-05T17:01:42 IST" name="teardown" finished-at="2025-02-05T17:01:42 IST" duration-ms="266" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- testCases.TC005_Register_Login -->
+      <class name="testCases.TC001_RegistrationCheck">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC001_RegistrationCheck@79924b]" started-at="2025-02-05T17:01:19 IST" name="setup" finished-at="2025-02-05T17:01:24 IST" duration-ms="4951" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[windows]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[local]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verify_account_registration()[pri:0, instance:testCases.TC001_RegistrationCheck@79924b]" started-at="2025-02-05T17:01:24 IST" name="verify_account_registration" finished-at="2025-02-05T17:01:27 IST" duration-ms="3096" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -84,7 +149,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_account_registration -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:testCases.TC001_RegistrationCheck@2794eab6]" started-at="2025-01-31T19:30:14 IST" name="teardown" finished-at="2025-01-31T19:30:14 IST" duration-ms="226" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:testCases.TC001_RegistrationCheck@79924b]" started-at="2025-02-05T17:01:27 IST" name="teardown" finished-at="2025-02-05T17:01:28 IST" duration-ms="307" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

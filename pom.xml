@@ -19,7 +19,7 @@
           <version>3.5.2</version>
           <configuration>
             <suiteXmlFiles>
-				<suiteXmlFiles>master.xml</suiteXmlFiles>
+				<suiteXmlFiles>testng.xml</suiteXmlFiles>
 			</suiteXmlFiles>
           </configuration>
         </plugin>

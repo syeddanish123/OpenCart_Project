@@ -1,12 +1,16 @@
 C:\Eclipse\WORKSPACE\OPENCART_PROJECT\src\test\java\pageObject\Homepage.java
 C:\Eclipse\WORKSPACE\OPENCART_PROJECT\src\test\java\pageObject\LoginPage.java
+C:\Eclipse\WORKSPACE\OPENCART_PROJECT\src\test\java\pageObject\MacPage.java
 C:\Eclipse\WORKSPACE\OPENCART_PROJECT\src\test\java\pageObject\MyAccountPage.java
+C:\Eclipse\WORKSPACE\OPENCART_PROJECT\src\test\java\pageObject\NavigationPage.java
 C:\Eclipse\WORKSPACE\OPENCART_PROJECT\src\test\java\pageObject\Registrationpage.java
 C:\Eclipse\WORKSPACE\OPENCART_PROJECT\src\test\java\testBase\BaseClass.java
 C:\Eclipse\WORKSPACE\OPENCART_PROJECT\src\test\java\testBase\Basepage.java
 C:\Eclipse\WORKSPACE\OPENCART_PROJECT\src\test\java\testCases\TC001_RegistrationCheck.java
 C:\Eclipse\WORKSPACE\OPENCART_PROJECT\src\test\java\testCases\TC002_LoginCheck.java
 C:\Eclipse\WORKSPACE\OPENCART_PROJECT\src\test\java\testCases\TC003_DataDrivenLoginCheck.java
+C:\Eclipse\WORKSPACE\OPENCART_PROJECT\src\test\java\testCases\TC004_VerifyMacProductSuccess_AddToCart.java
+C:\Eclipse\WORKSPACE\OPENCART_PROJECT\src\test\java\testCases\TC005_Register_Login.java
 C:\Eclipse\WORKSPACE\OPENCART_PROJECT\src\test\java\utilities\DanishExcelUtility.java
 C:\Eclipse\WORKSPACE\OPENCART_PROJECT\src\test\java\utilities\DataProviderss.java
 C:\Eclipse\WORKSPACE\OPENCART_PROJECT\src\test\java\utilities\ExtentReportUtility.java

@@ -41,6 +41,9 @@ WebElement btnContinue;
 @FindBy(xpath="//h1[normalize-space()='Your Account Has Been Created!']")
 WebElement txtConfirmationmessage;
 
+@FindBy(xpath="//a[@class='list-group-item'][normalize-space()='Logout']")
+WebElement btnlogout;
+
 public void setFirstname(String fname) {
 	
 	txtFirstname.sendKeys(fname);
@@ -93,5 +96,10 @@ public String getConfirmationMessage() {
 		return (e.getMessage());
 	}
 
+}
+
+public void clicklogout() {
+	
+	btnlogout.click();
 }
 }
