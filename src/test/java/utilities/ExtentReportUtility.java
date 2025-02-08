@@ -70,7 +70,7 @@ public class ExtentReportUtility implements ITestListener {
 	    
 	    try {
 	          
-	    	String ss=new BaseClass().captureScreenshot(result.getName());
+	    	String ss=ScreenshotUtility.captureScreenshot(result.getName());
 	        test.addScreenCaptureFromPath(ss);
 	    }
 	    catch(Exception e)

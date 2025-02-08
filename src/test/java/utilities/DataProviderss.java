@@ -9,7 +9,7 @@ public class DataProviderss {
 	@DataProvider(name="dp")
 	public Object[][] getdata() throws Exception {
 		
-		DanishExcelUtility excelutil=new DanishExcelUtility(System.getProperty("user.dir")+"\\testData\\DatatrivenTestData.xlsx");
+		ExcelUtility excelutil=new ExcelUtility(System.getProperty("user.dir")+"\\testData\\DatatrivenTestData.xlsx");
 		int totalrow=excelutil.getrow("Sheet1");
 		int totalcell=excelutil.getcol("Sheet1",1);
 		

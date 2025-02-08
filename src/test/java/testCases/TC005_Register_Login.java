@@ -8,6 +8,7 @@ import pageObject.LoginPage;
 import pageObject.MyAccountPage;
 import pageObject.Registrationpage;
 import testBase.BaseClass;
+import utilities.RandomStringUtility;
 
 public class TC005_Register_Login extends BaseClass {
 
@@ -21,12 +22,12 @@ public class TC005_Register_Login extends BaseClass {
 //Regostration Page
 		Registrationpage page=new Registrationpage(driver);
 		
-		page.setFirstname(getalphabetic());
-		page.setLastname(getalphabetic());
-	String email=getnumericalphabetic()+"@gmail.com";
+		page.setFirstname(RandomStringUtility.getalphabetic());
+		page.setLastname(RandomStringUtility.getalphabetic());
+	String email=RandomStringUtility.getnumericalphabetic()+"@gmail.com";
 		page.setEmail(email);
-		page.setTelephone(getnumeric());
-	String pass=getnumericalphabetic();
+		page.setTelephone(RandomStringUtility.getnumeric());
+	String pass=RandomStringUtility.getnumericalphabetic();
 		
 		page.setPassword(pass);
 		page.setConfirmPassword(pass);

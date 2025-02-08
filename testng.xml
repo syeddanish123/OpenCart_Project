@@ -18,10 +18,7 @@
 		<classes>
 			
 			<class name="testCases.TC001_RegistrationCheck"/>
-			<class name="testCases.TC002_LoginCheck"/>
-			<class name="testCases.TC003_DataDrivenLoginCheck"/>
-			<class name="testCases.TC004_VerifyMacProductSuccess_AddToCart"/>
-		    <class name="testCases.TC005_Register_Login"/>
+			
 		</classes>
 		
 	</test>

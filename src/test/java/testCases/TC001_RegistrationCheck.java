@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 import pageObject.Homepage;
 import pageObject.Registrationpage;
 import testBase.BaseClass;
+import utilities.RandomStringUtility;
 
 public class TC001_RegistrationCheck extends BaseClass {
 
@@ -22,12 +23,12 @@ public class TC001_RegistrationCheck extends BaseClass {
 		logger.info("Registration begin.......");
 		
 		Registrationpage regpage=new Registrationpage(driver);
-		regpage.setFirstname(getalphabetic());
-		regpage.setLastname(getalphabetic());
-		regpage.setEmail(getalphabetic()+"@gmail.com");
-		regpage.setTelephone(getnumeric());
+		regpage.setFirstname(RandomStringUtility.getalphabetic());
+		regpage.setLastname(RandomStringUtility.getalphabetic());
+		regpage.setEmail(RandomStringUtility.getalphabetic()+"@gmail.com");
+		regpage.setTelephone(RandomStringUtility.getnumeric());
 		    
-		String password=getnumericalphabetic();
+		String password=RandomStringUtility.getnumericalphabetic();
 		
 		regpage.setPassword(password);
 		regpage.setConfirmPassword(password);
@@ -39,7 +40,7 @@ public class TC001_RegistrationCheck extends BaseClass {
 		
 		String message=regpage.getConfirmationMessage();
 		
-		if(message.equalsIgnoreCase("Your Account Has Been Created!"))
+		if(message.equalsIgnoreCase("Your Account Has Been Created!!!"))
 		{
 			logger.info("Validation Success Tc-verify_account_registration passed");
 		    logger.warn("Completed/..");

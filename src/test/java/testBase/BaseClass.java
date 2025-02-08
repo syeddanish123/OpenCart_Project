@@ -31,7 +31,7 @@ public class BaseClass {
 	public Logger logger;
 	public Properties pro;
 	public FileInputStream fis;
-	public TakesScreenshot ts;
+	
 	
 	@BeforeClass(groups={"sanity","master","regression","datadriven"})
 	@Parameters({"os","browser","execution"})
@@ -123,46 +123,13 @@ public class BaseClass {
 	@AfterClass(groups={"sanity","master","regression","datadriven"})
 	public void teardown() {
 		
-		driver.quit();
+		if(!driver.equals(null))
+		   driver.quit();
 	}
 	
-	public String getalphabetic() {
-		
-		String alp=RandomStringUtils.randomAlphabetic(5);
-		return alp;
-	}
 	
-    public String getnumeric() {
-		
-		String alp=RandomStringUtils.randomNumeric(5);
-		return alp;
-	}
     
-    public String getnumericalphabetic() {
-		
-		String alp=RandomStringUtils.randomAlphanumeric(5);
-		return alp;
-	}
     
-    public String captureScreenshot(String tname) throws IOException {
-    	
-    	SimpleDateFormat sdf=new SimpleDateFormat("yyyy.mm.dd.hh.mm.ss");
-    	Date dt=new Date();
-    	String dates=sdf.format(dt);
-    	
-    	ts=(TakesScreenshot)driver;
-    	File source=ts.getScreenshotAs(OutputType.FILE);
-    	
-    	String Filepath=System.getProperty("user.dir")+"//screenshots//"+tname+"_Failed Screenshot_"+dates+".png";
-    	
-    	FileUtils.copyFile(source, new File(Filepath));
-    	
-//    	File target=new File(Filepath);
-//    	
-//    	source.renameTo(target);
-//    
-    	return Filepath;
-    }
     
 	
 }
