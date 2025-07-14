@@ -1,10 +1,12 @@
-name: Test Result of Selenium+TestNG Report
+my gihub yml file is correct
+
+name: Run Smoke Tests Manually
 
 on:
   workflow_dispatch:
     inputs:
-      suiteXmlFile:
-        description: 'TestNG suite file (e.g., testng.xml)'
+      testGroup:
+        description: 'TestNG Group to Run (e.g., Smoke, Regression)'
         required: true
         default: 'testng.xml'
 
@@ -20,7 +22,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: '17'
+          java-version: '17'  # Change if needed
 
       - name: Set up Chrome
         uses: browser-actions/setup-chrome@latest
@@ -28,8 +30,8 @@ jobs:
       - name: Compile Project
         run: mvn clean compile
 
-      - name: Run Maven Tests
-        run: mvn test -DsuiteXmlFile=${{ github.event.inputs.suiteXmlFile }}
+      - name: Run Maven Tests by Group
+        run: mvn test -DsuiteXmlFile=${{github.event.inputs.testGroup}}
 
       - name: Archive Test Reports
         if: always()
