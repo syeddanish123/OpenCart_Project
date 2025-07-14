@@ -3,8 +3,8 @@ name: Test Result of Selenium+TestNG Report
 on:
   workflow_dispatch:
     inputs:
-      testGroup:
-        description: 'TestNG Group to Run (e.g., Smoke, Regression)'
+      suiteXmlFile:
+        description: 'TestNG suite file (e.g., testng.xml)'
         required: true
         default: 'testng.xml'
 
@@ -20,7 +20,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: '17'  # Change if needed
+          java-version: '17'
 
       - name: Set up Chrome
         uses: browser-actions/setup-chrome@latest
@@ -28,9 +28,9 @@ jobs:
       - name: Compile Project
         run: mvn clean compile
 
-      - name: Run Maven Tests by testng
+      - name: Run Maven Tests
         run: mvn test -DsuiteXmlFile=src/test/resources/${{ github.event.inputs.suiteXmlFile }}
-        
+
       - name: Archive Test Reports
         if: always()
         uses: actions/upload-artifact@v4
