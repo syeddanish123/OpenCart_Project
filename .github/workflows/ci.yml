@@ -1,4 +1,4 @@
-name: Run Smoke Tests Manually
+name: Test Result of Selenium+TestNG Report
 
 on:
   workflow_dispatch:
