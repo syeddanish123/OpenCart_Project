@@ -1,6 +1,4 @@
-my gihub yml file is correct
-
-name: Run Smoke Tests Manually
+name: Run Test
 
 on:
   workflow_dispatch:
