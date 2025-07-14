@@ -25,9 +25,6 @@ jobs:
       - name: Set up Chrome
         uses: browser-actions/setup-chrome@latest
 
-      - name: Verify Chrome
-        run: google-chrome --version
-
       - name: Compile Project
         run: mvn clean compile
 
