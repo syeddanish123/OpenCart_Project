@@ -6,7 +6,7 @@ on:
       testGroup:
         description: 'TestNG Group to Run (e.g., Smoke, Regression)'
         required: true
-        default: 'sanity'
+        default: 'testng.xml'
 
 jobs:
   run-smoke-tests:
@@ -28,9 +28,9 @@ jobs:
       - name: Compile Project
         run: mvn clean compile
 
-      - name: Run Maven Tests by Group
-        run: mvn test -DsuiteXmlFile=${{github.event.inputs.testGroup}}
-
+      - name: Run Maven Tests by testng
+        run: mvn test -DsuiteXmlFile=src/test/resources/${{ github.event.inputs.suiteXmlFile }}
+        
       - name: Archive Test Reports
         if: always()
         uses: actions/upload-artifact@v4
