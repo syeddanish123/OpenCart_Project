@@ -1,10 +1,15 @@
-name: Selenium TestNG CI Pipeline
+name: Run Smoke Tests Manually
 
 on:
-  workflow_dispatch:  # Allows manual trigger from GitHub UI or n8n
+  workflow_dispatch:
+    inputs:
+      testGroup:
+        description: 'TestNG Group to Run (e.g., Smoke, Regression)'
+        required: true
+        default: 'Smoke'
 
 jobs:
-  run-tests:
+  run-smoke-tests:
     runs-on: ubuntu-latest
 
     steps:
@@ -15,22 +20,22 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: '17'  # Update to 11 or 8 if your project uses an older JDK
+          java-version: '17'  # Change if needed
 
-      - name: Set up Chrome Browser (for Selenium)
+      - name: Set up Chrome
         uses: browser-actions/setup-chrome@latest
 
-      - name: Verify Chrome installation
+      - name: Verify Chrome
         run: google-chrome --version
 
-      - name: Build Project with Maven
+      - name: Compile Project
         run: mvn clean compile
 
-      - name: Run Tests with Maven Surefire
-        run: mvn test
+      - name: Run Maven Tests by Group
+        run: mvn test -Dgroups=${{ github.event.inputs.testGroup }}
 
       - name: Archive Test Reports
-        if: always()  # Run even if tests fail
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: TestNG-Reports
