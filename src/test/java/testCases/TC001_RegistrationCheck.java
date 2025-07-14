@@ -40,7 +40,7 @@ public class TC001_RegistrationCheck extends BaseClass {
 		
 		String message=regpage.getConfirmationMessage();
 		
-		if(message.equalsIgnoreCase("Your Account Has Been Created!!"))
+		if(message.equalsIgnoreCase("Your Account Has Been Created!"))
 		{
 			logger.info("Validation Success Tc-verify_account_registration passed");
 		    logger.warn("Completed/..");
