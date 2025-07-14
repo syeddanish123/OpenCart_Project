@@ -6,7 +6,7 @@ on:
       testGroup:
         description: 'TestNG Group to Run (e.g., Smoke, Regression)'
         required: true
-        default: 'Smoke'
+        default: 'sanity'
 
 jobs:
   run-smoke-tests:
