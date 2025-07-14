@@ -29,7 +29,7 @@ jobs:
         run: mvn clean compile
 
       - name: Run Maven Tests
-        run: mvn test -DsuiteXmlFile=src/test/resources/${{ github.event.inputs.suiteXmlFile }}
+        run: mvn test -DsuiteXmlFile=${{ github.event.inputs.suiteXmlFile }}
 
       - name: Archive Test Reports
         if: always()
