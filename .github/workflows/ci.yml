@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
     inputs:
       testGroup:
-        description: 'TestNG Group to Run (e.g., Smoke, Regression)'
+        description: 'TestNG Group to Run (e.g., Smoke, Regression, Master)'
         required: true
-        default: 'testng.xml'
+        default: '@smoke'
 
 jobs:
   run-smoke-tests:
@@ -29,7 +29,7 @@ jobs:
         run: mvn clean compile
 
       - name: Run Maven Tests by Group
-        run: mvn test -DsuiteXmlFile=${{github.event.inputs.testGroup}}
+        run: mvn test -Dgroups=${{github.event.inputs.testGroup}}
 
       - name: Archive Test Reports
         if: always()
